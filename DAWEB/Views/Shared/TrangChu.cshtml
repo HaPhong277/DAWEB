@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrangChu</title>
+    <link href="~/Assets/Admin/css/TrangChu.css" rel="stylesheet">
+    <link href="~/Assets/Admin/css/GioiThieu.css" rel="stylesheet">
+    <link href="~/Assets/Admin/css/Cart.css" rel="stylesheet">
+    <link href="~/Assets/Admin/css/index.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/Assets/Admin/css/fontawesome-free-6.2.1/css/all.min.css" type="text/css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="header_top_left">
+                <i class="fa-brands fa-facebook-f" style="color: white"></i>
+                <i class="fa-brands fa-instagram" style="color: white"></i>
+                <i class="fa-brands fa-twitter" style="color: white"></i>
+            </div>
+            <p style="color: white;font-size: 14px;">Miễn phí vận chuyển với mã “Watches2023”</p>
+            <i class="fa-solid fa-user" style="color: white;"></i>
+
+            <!-- </div> -->
+        </div>
+        <header>
+            <div class="top_narbar">
+                <div onclick="showmenu()">
+                    <i class=" fa-solid fa-bars bars"></i>
+                </div>
+                <a href="/TrangChu/index">
+                    <img src=" ~/images/logo.png" alt="">
+                </a>
+                <a href="/Cart/ShowToCart">
+                    <div style="display:flex;justify-content:center;align-items:center">
+                        <i class="fa-sharp fa-solid fa-cart-shopping bars"></i>
+                        <p style="position: absolute; top: 18px; right: 116px;">@Html.Action("BagCart", "Cart")</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+        <div id="menu">
+
+        </div>
+    </div>
+
+    <!-- body -->
+    <!-- <div style="height: 1000px;"></div> -->
+    @RenderBody()
+
+    <!-- endbody -->
+
+
+    <div class="footer">
+        <div class="footer_contain">
+            <div class="item1">
+                <div>
+                    <img src="~/images/logo.png" alt="logo">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="box_text">235 Hoàng Quốc Việt</p>
+                </div>
+                <div class="box" style="width:140px;">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="box_text"><a href="tel:0769220162">076 922 0162</a></p>
+                </div>
+                <div class="box" style="width:180px;">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="box_text"><a href="mailto:demonhunterg@gmail.com">haphong@gmail.com</a></p>
+                </div>
+                <div class="box" style="width:140px;">
+                    <i class="fa-brands fa-skype"></i>
+                    <p class="box_text"><a href="skype:demonhunterp?chat">demonhunterp</a></p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item2_title">
+                    <p class="item2_text">MENU</p>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Trang Chủ</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Giới Thiệu</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Cửa Hàng</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Tin Tức</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Liên hệ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item2_title">
+                    <p class="item2_text">Hỗ TRỢ</p>
+                </div>
+                <div>
+                    <a>
+
+                        <p style="margin-left: 10px;">Chính sách bảo hành</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Chính sách đổi trả</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Miễn phí giao hàng</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Chăm sóc khách hàng</p>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <p style="margin-left: 10px;">Tư vấn mua hàng</p>
+                    </a>
+                </div>
+            </div>
+            <div class="item3">
+                <div class="item3_title">
+                    <p class="item2_text">DANH MỤC</p>
+                </div>
+                <div>
+                    <p class="box_text">Đăng ký để nhận được được thông tin mới nhất từ chúng tôi.</p>
+                </div>
+                <div class="send_email">
+                    <input type="text" class="form" placeholder="Email">
+                    <button class="d_btn-email btnemail "><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+                <div class="item3_icon">
+                    <i class="color fa-brands fa-facebook-f"></i>
+                    <i class="color1 fa-brands fa-instagram"></i>
+                    <i class="color2 fa-brands fa-twitter"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Assets/Admin/js/TrangChu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(Window).scroll(function () {
+                if ($(this).scrollTop() && window.pageYOffset > 101) {
+                    $('header').addClass('sticky');
+                }
+                else {
+                    $('header').removeClass('sticky');
+                }
+            })
+        });
+        $(document).ready(function () {
+            const $ = document.querySelector.bind(document);
+            const $$ = document.querySelectorAll.bind(document);
+
+            const tabs = $$(".tab-item");
+            const panes = $$(".tab-pane");
+            const tabActive = $(".tab-item.active");
+            const line = $(".tabs .line");
+
+
+            function row(line, tabActive) {
+                line.style.left = tabActive.offsetLeft + "px";
+                line.style.width = tabActive.offsetWidth + "px";
+            }
+
+            row(line, tabActive);
+            tabs.forEach((tabs, index) => {
+                const pane = panes[index];
+
+                tabs.onclick = function () {
+                    $(".tab-item.active").classList.remove("active");
+                    $(".tab-pane.active").classList.remove("active");
+
+                    line.style.left = this.offsetLeft + "px";
+                    line.style.width = this.offsetWidth + "px";
+
+                    this.classList.add("active");
+                    pane.classList.add("active");
+                };
+            });
+        });
+
+        function showmenu() {
+            menu({
+                TrangChu: 'TRANG CHỦ ',
+                GioiThieu: ' GIỚI THIỆU ',
+                SanPham: 'SẢN PHẨM',
+                Blog: 'BLOG',
+                LienHe: 'LIÊN HỆ',
+
+            });
+        }
+        //  } function ShowCart() {
+    </script>
+</body>
+
+</html>
